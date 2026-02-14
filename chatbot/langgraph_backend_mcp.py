@@ -55,7 +55,7 @@ def get_tools():
 search_tool = DuckDuckGoSearchRun(region="us-en")
 
 
-tools = [search_tool,*get_tools()]
+tools = [search_tool,*get_tools]
 
 llm = ChatOpenAI()
 llm_tools = llm.bind_tools(tools=tools)
